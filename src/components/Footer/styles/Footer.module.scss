@@ -1,0 +1,143 @@
+.footer {
+    height: 100px;
+    padding-top: 60px;
+    background-color: #0E45B3;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+
+    /* Дополнительное улучшение для мобильных */
+    @media (max-width: 768px) {
+        height: auto;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        /* Добавляем отступы между элементами */
+    }
+}
+
+.left {
+    display: flex;
+    gap: 0.3rem;
+    justify-content: center;
+
+    /* Адаптация для мобильных */
+    @media (max-width: 768px) {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+.leftTop,
+.leftBottom {
+    white-space: nowrap;
+    font-size: 13px;
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+        /* Увеличиваем размер шрифта для мобильных */
+    }
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+
+    /* Адаптация для мобильных */
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+.contactGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    border: 2px solid #285ECA;
+}
+
+.mail {
+    font-weight: bold;
+    padding: 4px 0px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 5px;
+    a {
+        color: #fff;
+        text-decoration: none;
+        &>span{
+            font-size: 9px;
+            @media (max-width: 768px) {
+                font-size: 12px;
+                /* Увеличиваем размер шрифта для мобильных */
+            }
+        }
+    }
+}
+.phone {
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 9px;
+    margin-right: 5px;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 10px;
+        /* Увеличиваем размер шрифта для мобильных */
+    }
+}
+.contEmail{
+   max-width: 100%;
+   display: flex;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+.separator {
+    font-weight: normal;
+    color: #ffffff;
+    margin-right: 5px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+.contSocial{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    @media (max-width: 768px) {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+.telegram {
+    position: relative;
+    top: 3px;
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+    @media (max-width: 768px) {
+        width: 30px;
+        /* Увеличиваем размер иконки на мобильных */
+        height: 30px;
+    }
+}

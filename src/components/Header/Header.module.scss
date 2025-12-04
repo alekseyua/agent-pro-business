@@ -1,0 +1,160 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #0E45B3;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        position: relative;
+        padding: 1.5rem 2rem;
+        /* Уменьшаем отступы */
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+.scrolled {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.left .logo {
+    height: 110px;
+
+    @media (max-width: 768px) {
+        height: 60px;
+        /* Уменьшаем размер логотипа */
+    }
+}
+
+.left{
+    @media (max-width: 768px) {
+        position: absolute;
+        left: 10px;
+    }
+}
+.center {
+    text-align: center;
+    margin-top: 10px;
+
+    .title {
+        font-size: 4.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 75%;
+
+        @media (max-width: 768px) {
+            font-size: 2.2rem;
+            position: relative;
+            left: 30px;
+            /* Уменьшаем размер шрифта */
+            line-height: 1.2;
+            /* Уменьшаем межстрочный интервал */
+        }
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
+        flex-wrap: wrap;
+        /* Разрешаем перенос элементов, если не помещаются */
+            @media (max-width: 768px) {
+                gap: 0;
+            }
+        a {
+            text-decoration: none;
+            color: #1D79D2;
+            font-weight: 500;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &.active {
+                color: #fff;
+                font-weight: bold;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 1rem;
+                /* Уменьшаем размер шрифта */
+                padding: 0.5rem 1rem;
+                /* Добавляем padding для лучшего клика */
+            }
+        }
+    }
+}
+
+.right {
+    text-align: right;
+
+    .phone {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        border: 2px solid #285ECA;
+        padding: 4px 10px;
+
+        &>a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            text-align: center;
+            /* Центрируем телефон на мобильных */
+        }
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+
+        img {
+            width: 17px;
+            height: 17px;
+            cursor: pointer;
+
+            @media (max-width: 768px) {
+                width: 22px;
+                /* Увеличиваем иконки */
+                height: 22px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        text-align: center;
+        /* Центрируем иконки и телефон */
+    }
+    .iconsTelegram{
+        position: relative;
+    }
+    .iconsTelegramMob{
+        @media (max-width: 768px) {
+            position: fixed;
+            margin: 0;
+            right: 20px;
+            bottom: 50px;
+            transform: scale(2);
+        }
+    }
+    .subDesc{
+        color: #fff;
+        font-size: 10px;
+        @media (max-width: 768px) {
+        font-size: 14px;
+        }
+    }
+}

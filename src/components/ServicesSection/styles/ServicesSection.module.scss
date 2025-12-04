@@ -1,0 +1,54 @@
+.servicesSection {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    color: var(--color-text-blue);
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width:  5rem;
+    height: 5rem;
+    margin-right: 4rem;
+}
+
+.text {
+    font-size: 1.2rem;
+    text-align: left;
+    white-space: pre-line;
+    text-align: start;
+    color: var(--color-text-blue);
+    font-weight: 600;
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

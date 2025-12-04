@@ -1,0 +1,138 @@
+.feedbackSection {
+    background-color: var(--color-text-blue);
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+
+.carouselWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.arrowLeft,
+.arrowRight {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.arrowLeft {
+    left: 2rem;
+}
+
+.arrowRight {
+    right:2rem;
+    transform: rotate(180deg);
+}
+
+.cardsRow {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    max-width: 1000px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 300px;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.avatarLogoWrapper {
+    position: relative;
+    height: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .avatar {
+        position: absolute;
+        width:  120px;
+        height: 120px;
+        object-fit: contain;
+        border-radius: 50%;
+        top: .1rem;
+        background: #a8c4ea;
+    }
+
+    .avatar {
+        z-index: 10;
+    }
+
+    .logo {
+        z-index: 1;
+        transform: translate(22px, 27px);
+        // border-radius: 50%;
+        z-index: 11;
+    }
+}
+
+.cardTitle {
+    color: var(--color-text-blue);
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardDescription {
+    color: var(--color-text-blue);
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.4;
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
