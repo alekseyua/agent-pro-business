@@ -84,11 +84,11 @@ const NewsSection: React.FC = () => {
               <div className={styles.imageWrapper}>
                 <img src={item.image} alt={item.title} />
               </div>
-              <div className={styles.caption}>
-                <p>{item.title}</p>
-              </div>
               <div className={styles.newsDesc}>
                 {item.text}
+              </div>
+              <div className={styles.caption}>
+                <p>{item.title}</p>
               </div>
             </div>
           </a>

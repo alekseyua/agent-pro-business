@@ -108,17 +108,17 @@ useEffect(() => {
 
         <div className={styles.cardsRow}>
           {listItems.map((item: Feedback) => (
-            <div className={styles.card} key={item.id}>
-              <div className={styles.avatarLogoWrapper}>
+            <div className={item?.image? styles.card: styles['card__cont--with-image']} key={item.id}>
+              {item?.image &&  <div className={styles.avatarLogoWrapper}>
                 <img src={item.image} alt="Аватар" className={styles.avatar} />
                 <img
                   src={item.logo}
                   alt="Логотип компании"
                   className={styles.logo}
                 />
-              </div>
+              </div>}
               <div className={styles.cardTitle}>{item.title}</div>
-              <div className={styles.cardDescription}>{item.text}</div>
+              <div className={item?.image ? styles.cardDescription : styles['card__desc--with-image']}>{item.text}</div>
             </div>
           ))}
         </div>

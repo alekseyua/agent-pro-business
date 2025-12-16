@@ -87,6 +87,10 @@
     opacity: .8;
     &>p{
         opacity: 1;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 }
 .newsLink{
@@ -95,11 +99,14 @@
 }
 .newsDesc {
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 3;
     /* ← показываем только 6 строк */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: 75px;
+    // min-height: 200px;
+    // max-height: 200px;
 }
 .hidden {
     opacity: 0;

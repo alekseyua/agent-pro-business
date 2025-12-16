@@ -55,13 +55,28 @@
     flex-wrap: nowrap;
     overflow: hidden;
     max-width: 1000px;
+    position: relative;
 }
 
+.card__cont--with-image {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1rem;
+    width: fit-content;
+    // width: 300px;
+    min-height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
 .card {
     background-color: #ffffff;
     border-radius: 12px;
     padding: 1rem;
-    width: 300px;
+    width: fit-content;
+    // width: 300px;
     min-height: 400px;
     position: relative;
     display: flex;
@@ -124,8 +139,56 @@
     justify-content: flex-start;
     overflow: hidden;
     overflow-y: auto;
-}
+    padding: 20px;
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 6px;
+    }
 
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #5777d2;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #364776;
+    }
+}
+.card__desc--with-image{
+    color: var(--color-text-blue);
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.4;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 20px;
+    text-align: justify;
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #5777d2;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #364776;
+    }
+}
 .hidden {
   opacity: 0;
   transform: translateY(40px);

@@ -6,7 +6,7 @@ interface Props {
   className?: string;
 }
 
-const Container: React.FC<Props> = ({ children, className = "" }) => {
+const Container: React.FC<Props> = ({ children, className = "" }: Props) => {
   return <div className={`${styles.container} ${className}`}>{children}</div>;
 };
 
