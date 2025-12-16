@@ -102,12 +102,12 @@ useEffect(() => {
       <h2 className={styles.title}>О НАС</h2>
 
       <div className={styles.carouselWrapper}>
-        <button className={styles.arrowLeft} onClick={handlePrev}>
-          <img src={icons.arrowLeftBlue} alt="Назад" />
-        </button>
+        {listItems.length > 1 && <button className={styles.arrowLeft} onClick={handlePrev}>
+        <img src={icons.arrowLeftBlue} alt="Назад" />
+      </button>}
 
         <div className={styles.cardsRow}>
-          {listItems.map((item: Feedback) => (
+          {[...listItems].map((item: Feedback) => (
             <div className={item?.image? styles.card: styles['card__cont--with-image']} key={item.id}>
               {item?.image &&  <div className={styles.avatarLogoWrapper}>
                 <img src={item.image} alt="Аватар" className={styles.avatar} />
@@ -123,9 +123,9 @@ useEffect(() => {
           ))}
         </div>
 
-        <button className={styles.arrowRight} onClick={handleNext}>
+        {listItems.length > 1 &&  <button className={styles.arrowRight} onClick={handleNext}>
           <img src={icons.arrowLeftBlue} alt="Вперёд" />
-        </button>
+        </button>}
       </div>
     </section>
   );
